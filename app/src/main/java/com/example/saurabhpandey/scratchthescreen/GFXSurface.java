@@ -16,4 +16,17 @@ public class GFXSurface extends Activity {
         ourSurfaceView = new SaurabhSuraface(this);
         setContentView(ourSurfaceView);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ourSurfaceView.pause();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ourSurfaceView.resume();
+    }
 }

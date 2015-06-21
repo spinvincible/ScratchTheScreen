@@ -11,6 +11,7 @@ public class SaurabhSuraface extends SurfaceView implements Runnable {
 
     SurfaceHolder surfaceHolder;
     Thread thread;
+    boolean isRunning = true;
 
     public SaurabhSuraface(Context context) {
         super(context);
@@ -23,6 +24,23 @@ public class SaurabhSuraface extends SurfaceView implements Runnable {
 
     @Override
     public void run() {
+        while (isRunning) {
+            if (!surfaceHolder.getSurface().isValid()) {
+                continue;
+            } else {
+
+            }
+
+        }
+
+    }
+
+
+    public void resume() {
+    }
+
+    public void pause() {
+
 
     }
 }

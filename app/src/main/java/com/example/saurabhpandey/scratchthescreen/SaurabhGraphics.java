@@ -46,7 +46,7 @@ public class SaurabhGraphics extends View {
         canvas.drawBitmap(arrow, (canvas.getWidth() / 2 - 55), ChangingY, null);
 
         if (ChangingY < canvas.getHeight()) {
-            ChangingY += 5;
+            ChangingY += 4;
         } else {
 
             ChangingY = 0;
@@ -57,7 +57,7 @@ public class SaurabhGraphics extends View {
         canvas.drawBitmap(arrow2, ChangingX, canvas.getHeight() / 2 - 20, null);
 
         if (ChangingX < canvas.getHeight()) {
-            ChangingX += 5;
+            ChangingX += 4;
         } else {
 
             ChangingX = 0;

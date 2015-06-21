@@ -37,6 +37,14 @@ public class SaurabhGraphics extends View {
 
         invalidate();
 
-       
+        canvas.drawBitmap(arrow2, ChangingX, canvas.getHeight() / 2 - 20, null);
+
+        if (ChangingX < canvas.getHeight()) {
+            ChangingX += 5;
+        } else {
+
+            ChangingX = 0;
+        }
+        invalidate();
     }
 }

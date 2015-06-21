@@ -12,7 +12,7 @@ import android.view.View;
 
 public class SaurabhGraphics extends View {
 
-    Bitmap arrow, arrow2;
+    Bitmap arrow, arrow2, paintingArea;
     float ChangingY, ChangingX;
     Typeface opensans;
 
@@ -27,6 +27,8 @@ public class SaurabhGraphics extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+//        paintingArea = drawBitmap(paintingArea, new Rect(100, 100, 150, 150), new Rect(0, 0, 50, 50), null);
 //        Rect rect = new Rect();
 //        rect.set(0, 100, canvas.getWidth(), 100);
 //        Paint yellow = new Paint();
@@ -37,8 +39,8 @@ public class SaurabhGraphics extends View {
         textPaint.setColor(Color.BLACK);
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setTextSize(40);
+//        textPaint.setStyle(Paint.Style.STROKE);
         canvas.drawText("The Moving Arrows ;) ", canvas.getWidth() / 2, canvas.getHeight() / 2, textPaint);
-
 
 
         canvas.drawBitmap(arrow, (canvas.getWidth() / 2 - 55), ChangingY, null);
@@ -63,4 +65,5 @@ public class SaurabhGraphics extends View {
 
         invalidate();
     }
+
 }

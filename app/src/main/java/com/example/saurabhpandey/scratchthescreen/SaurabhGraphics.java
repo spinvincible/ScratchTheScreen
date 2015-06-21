@@ -9,9 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.view.View;
 
-/**
- * Created by SaurabhPandey on 6/21/2015.
- */
+
 public class SaurabhGraphics extends View {
 
     Bitmap arrow, arrow2;

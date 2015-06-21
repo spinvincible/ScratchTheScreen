@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.view.View;
 
 /**
@@ -26,6 +28,7 @@ public class SaurabhGraphics extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawColor(Color.WHITE);
+
         canvas.drawBitmap(arrow, (canvas.getWidth() / 2 - 55), ChangingY, null);
 
         if (ChangingY < canvas.getHeight()) {
@@ -45,6 +48,11 @@ public class SaurabhGraphics extends View {
 
             ChangingX = 0;
         }
+        Rect rect = new Rect();
+        rect.set(0, 100, canvas.getWidth(), 100);
+        Paint yellow = new Paint();
+        yellow.setColor(Color.YELLOW);
+        canvas.drawRect(rect, yellow);
         invalidate();
     }
 }
